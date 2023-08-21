@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>İletişim Ekranı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .top-bar img {
+            width: 250px;
+            height: auto;
+            cursor: pointer;
+        }
+        .top-bar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding-top: 20px; 
+          padding-bottom: 20px; 
+        }
+        .top-bar li {
+            cursor: pointer;
+        }
+        .top-bar li a {
+            font-weight: bold; /* Yazı fontunu kalınlaştır */
+            color: white; /* Yazı rengini beyaz yap */
+            text-decoration: none; /* Alt çizgiyi kaldır */
+        }
+        .login-container {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 59px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .login-container h2 {
+            margin-top: 0;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label, .input-group input {
+            display: block;
+            width: 100%;
+        }
+        .input-group input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .user-button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .user-button a {
+            text-decoration: underline; /* Altı çizili stil */
+            color: white; /* Yazı rengi beyaz yap */
+        }
+        .map-container {
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 300px;
+        }
+        .content-container {
+            float: left;
+            width: 300px;
+            padding: 20px;
+            margin-left: 130px;
+        }
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .atmacalogo-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 10px; /* Logo ile diğer bilgiler arasında bir boşluk bırakmak için */
+    }
+    .spacer {
+           margin: 100px 0; /* İstenilen boşluk değerlerini ayarlayabilirsiniz */
+    }
+    .atmacalogo {
+        float: right; /* Logoyu sağa yaslamak için */
+         /* Logo ile içerik arasında bir boşluk bırakmak için */
+        
+        margin-bottom: 100px;
+    }
+    .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: rgb(0, 0, 0);
+        }
+        .dropdown-content a:hover {
+            background-color: #4566c8;
+        }
+    </style>
+    <script>
+        function goToMainPage() {
+            window.location.href = "http://127.0.0.1:5500/home.html"; // Ana sayfanızın URL'sini buraya ekleyin
+        }
+        function goToHomePage() {
+            window.location.href = "http://127.0.0.1:5500/home.html"; // Farklı sayfanın URL'sini buraya ekleyin
+        }
+        function goToContactUsPage() {
+            window.location.href = "http://127.0.0.1:5500/contact.html"; // Farklı sayfanın URL'sini buraya ekleyin
+        }
+        function goToAboutUsPage() {
+            window.location.href = "http://127.0.0.1:5500/aboutus.html"; // Farklı sayfanın URL'sini buraya ekleyin
+        }
+        function goToLoginPage() {
+            window.location.href = "http://127.0.0.1:5500/login.html"; // Giriş sayfanızın URL'sini buraya ekleyin
+        }
+        function goToServicesPage() {
+            window.location.href = "http://127.0.0.1:5500/services.html"; // Giriş sayfanızın URL'sini buraya ekleyin
+        }
+        
+    </script>
+
+</head>
+<body>
+    <div class="top-bar">
+        <img src="sunnylogo.png" alt="Logo"onclick="goToHomePage()">
+        <ul>
+            <li><a href="#"onclick="goToHomePage()">Anasayfa</a></li>
+            <li class="dropdown">
+                <a href="#"onclick="goToAboutUsPage()">Hakkımızda</a>
+                <div class="dropdown-content">
+                    <a a href="#"onclick="goToContactUsPage()">İletişim</a>
+                    <a href="#"onclick="goToServicesPage()">Kurumsal</a>
+                </div>
+            </li>
+            
+        </ul>
+      
+    </div>
+    <div class="content-container">
+        <h1>İletişim</h1>
+        <div class="spacer"></div> 
+        <div class="spacer"></div> 
+
+        <h3>Adres:</h3>
+        <p><a href="https://goo.gl/maps/G5CnRKJM3274HNH58">GÜRSEL MAH. IMRAHOR CAD. PREMIER KAMPÜS OFIS
+
+            A BLOK NO: 29 A İÇ KAPI NO: 105 KAGITHANE/ ISTANBUL</a></p><h3>Telefon:</h3>
+        <p>+90 212 801 47 78</p> 
+        <h3>E-Mail:</h3>
+        <p>destek@sunnyteknoloji.com.tr</p>
+       
+    </div>
+        
+ 
+
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3007.880554249037!2d28.96459117603662!3d41.07160351552318!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab71ce5a32e9b%3A0x7114444d601775c7!2zUHJlbWllciBLYW1ww7xzIEthxJ_EsXRoYW5l!5e0!3m2!1str!2str!4v1692602462449!5m2!1str!2str" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  
+    
+    <div style="margin-top: 40px;" class="atmacalogo-container">
+        <img src="atmacalogo.png" alt="Logo" class="atmacalogo" width="600" height="305">
+    </div>
+  
+
+    
+</body>
+</html>

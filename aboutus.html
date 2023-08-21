@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>İletişim Ekranı</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .top-bar {
+            background-color: #333;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            color: white;
+            margin-bottom: 20px;
+        }
+        .top-bar img {
+            width: 250px;
+            height: auto;
+            cursor: pointer;
+        }
+        .top-bar ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding-top: 20px; 
+          padding-bottom: 20px; 
+        }
+        .top-bar li {
+            cursor: pointer;
+            position: relative;
+        }
+        .top-bar li a {
+            font-weight: bold; /* Yazı fontunu kalınlaştır */
+            color: white; /* Yazı rengini beyaz yap */
+            text-decoration: none; /* Alt çizgiyi kaldır */
+        }
+        .login-container {
+            background-color: #fff;
+            border-radius: 15px;
+            padding: 59px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        .login-container h2 {
+            margin-top: 0;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label, .input-group input {
+            display: block;
+            width: 100%;
+        }
+        .input-group input {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        .btn {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .user-button {
+            background-color: #000000;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+        .user-button a {
+            text-decoration: underline; /* Altı çizili stil */
+            color: white; /* Yazı rengi beyaz yap */
+        }
+        .map-container {
+            text-align: center;
+            margin-top: 100px;
+            margin-left: 300px;
+        }
+        .content-container {
+            float: left;
+            width: 300px;
+            padding: 20px;
+            margin-left: 130px;
+        }
+        .contact-info {
+            background-color: #f9f9f9;
+            padding: 20px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .atmacalogo-container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 10px; /* Logo ile diğer bilgiler arasında bir boşluk bırakmak için */
+        }
+        .spacer {
+            margin: 100px 0; /* İstenilen boşluk değerlerini ayarlayabilirsiniz */
+        }
+        .atmacalogo {
+            float: right; /* Logoyu sağa yaslamak için */
+            /* Logo ile içerik arasında bir boşluk bırakmak için */
+            margin-left: 250px;
+            margin-bottom: 100px;
+        }
+        .dropdown {
+            position: relative;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #000000;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(255, 255, 255, 0.2);
+            z-index: 1;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        .dropdown-content a {
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            color: rgb(0, 0, 0);
+        }
+        .dropdown-content a:hover {
+            background-color: #4566c8;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+    </style>
+    <script>
+        function goToMainPage() {
+            window.location.href = "http://127.0.0.1:5500/home.html"; // Ana sayfanızın URL'sini buraya ekleyin
+        }
+        function goToHomePage() {
+            window.location.href = "http://127.0.0.1:5500/home.html"; // Farklı sayfanın URL'sini buraya ekleyin
+        }
+        function goToContactUsPage() {
+            window.location.href = "http://127.0.0.1:5500/contact.html"; // Farklı sayfanın URL'sini buraya ekleyin
+        }
+        function goToAboutUsPage() {
+            window.location.href = "http://127.0.0.1:5500/aboutus.html"; // Farklı sayfanın URL'sini buraya ekleyin
+        }
+        function goToLoginPage() {
+            window.location.href = "http://127.0.0.1:5500/login.html"; // Giriş sayfanızın URL'sini buraya ekleyin
+        }
+        function goToServicesPage() {
+            window.location.href = "http://127.0.0.1:5500/services.html"; // Giriş sayfanızın URL'sini buraya ekleyin
+        }
+    </script>
+
+</head>
+<body>
+    <div class="top-bar">
+        <img src="sunnylogo.png" alt="Logo"onclick="goToHomePage()">
+        <ul>
+            <li><a href="#"onclick="goToHomePage()">Anasayfa</a></li>
+            <li class="dropdown">
+                <a href="#"onclick="goToAboutUsPage()">Hakkımızda</a>
+                <div class="dropdown-content">
+                    <a a href="#"onclick="goToContactUsPage()">İletişim</a>
+                    <a href="#"onclick="goToServicesPage()">Kurumsal</a>
+                </div>
+            </li>
+          
+        </ul>
+       
+        
+    </div> <div style="margin-left: 50px;">
+            <h1>Hakkımızda</h1>
+        </div>
+  <div style="margin-left: 70px;"><p style="margin-top: 50px;"> Atmaca Holding bünyesinde faaliyet gösteren <span class="bold-text"> Sunny Teknoloji</span>  Ar-Ge Merkezi olarak, inovasyon ve teknoloji alanında öncü bir konumda yer alıyoruz. Amacımız, ileri teknolojiler ve yenilikçi çözümlerle dünya standartlarında katma değer sağlamaktır. Müşterilerimize rekabet avantajı kazandırmak, sektörde öncü olmalarını sağlamak ve sürdürülebilir büyümelerine katkıda bulunmak için en son teknolojileri kullanıyoruz.
+<p style="margin-top: 40px;">Atmaca Holding’in kurumsal değerleri doğrultusunda, müşteri memnuniyeti ve iş birliği odaklı yaklaşımı benimsiyoruz. Müşterilerimizin ihtiyaçlarını anlamak, onlarla yakın bir ilişki kurmak ve işbirliği içinde çalışmak bizim için önceliklidir. Her projede, müşterilerimize özelleştirilmiş çözümler sunmak ve onların beklentilerini aşmak için çaba gösteriyoruz.</p>
+<p style="margin-top: 40px;">Ar-Ge Merkezimizde çalışan ekip, alanında uzman ve deneyimli mühendislerden oluşmaktadır. Sürekli olarak gelişim ve öğrenme üzerine odaklanarak, en son teknolojik trendleri takip ediyor ve yenilikçi çözümler geliştirmek için yaratıcı fikirler üretiyoruz. Ar-Ge faaliyetlerimizde, disiplinler arası çalışma ve bilgi paylaşımı ile güçlü bir sinerji yaratıyoruz</p>
+<p style="margin-top: 40px;">Atmaca Holding’in vizyonu doğrultusunda, sadece müşterilerimize değil, aynı zamanda Türkiye’nin teknoloji sektörüne de katkıda bulunmayı hedefliyoruz. Yenilikçi projeler geliştirme, akademik iş birlikleri ve endüstriyel ortaklıklar gibi faaliyetlerle, teknolojik gelişmelerin hızlanmasına ve sektördeki potansiyelin artmasına katkı sağlıyoruz.</p>
+   </p><p style="margin-top: 40px;">Güvenilirlik, kalite ve mükemmeliyeti ön planda tutuyoruz. Ar-Ge faaliyetlerimizde sürekli iyileştirme ve en iyi uygulamaları benimseyerek, müşterilerimize en üst düzeyde değer sunmayı amaçlıyoruz. Yenilikçi fikirleri gerçeğe dönüştürmek ve teknolojik sınırları zorlamak için tutkuyla çalışıyoruz.</p>
+</p><p style="margin-top: 40px;"><span class="bold-text"> Sunny Teknoloji</span> Ar-Ge Merkezi olarak, müşterilerimizin ve paydaşlarımızın güvenini kazanmayı ve uzun vadeli sürdürdürülebilir iş ilişkileri kurmayı hedefliyoruz. Güçlü bir takım ruhuyla çalışarak, karşılıklı anlayış, saygı ve dürüstlük temelinde işbirlikleri geliştiriyoruz.</p>
+       
+<p style="margin-top: 40px;">Sorumluluk bilinciyle hareket ediyor ve etik değerlere bağlı kalarak çalışıyoruz. Çevresel sürdürülebilirlik ve toplumsal katkılar konularında önemli bir rol oynamayı hedefliyoruz. Teknolojik yeniliklerimizi, insanların yaşamını iyileştirmek ve daha sürdürülebilir bir gelecek yaratmak için kullanıyoruz.</p>
+<p style="margin-top: 40px;">Atmaca Holding çatısı altındaki <span class="bold-text"> Sunny Teknoloji</span> olarak, geleceğe yönelik teknoloji çözümleri sunmaya ve sektörde öncü bir rol üstlenmeye devam edeceğiz. Müşterilerimizin ve paydaşlarımızın beklentilerini aşmak için her zaman en iyisini yapmaya kararlıyız.</p>
+<p style="margin-top: 40px;">Sizlerle birlikte, teknolojinin gücünü kullanarak daha ileriye gitmek ve başarıyı birlikte inşa etmek için sabırsızlanıyoruz.</p></div> 
+</div>
+<img src="atmacalogo.png" alt="Logo" class="atmacalogo"  onclick="goToHomePage()" width="400" height="205">
